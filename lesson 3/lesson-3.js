@@ -11,11 +11,26 @@
 // }, options);
 // observer.observe(target);
 
-const target = document.querySelectorAll('.appear');
-const options = {threshold: 0.3}
-const observer = new IntersectionObserver(entries=>{
+// const target = document.querySelectorAll('.appear');
+// const options = {threshold: 0.3}
+// const observer = new IntersectionObserver(entries=>{
+//     for(let entry of entries){
+//         entry.target.classList.toggle('box', entry.isIntersecting);
+//     }
+// }, options);
+// target.forEach(target => observer.observe(target));
+
+const targets = document.querySelectorAll('img[data-src]');
+const object = {threshold: 0.5}
+const visual = new IntersectionObserver((entries, obs)=>{
     for(let entry of entries){
-        entry.target.classList.toggle('box', entry.isIntersecting);
+        let img = entry.target
+        if(entry.isIntersecting && entry.intersectionRatio >= 0.5){
+            img.src = img.dataset.src;
+            img.classList.add('img-apprear');
+            img.removeAttribute('data.src');
+            obs.unobserve(img);
+         }
     }
-}, options);
-target.forEach(target => observer.observe(target));
+}, object);
+targets.forEach(target => visual.observe(target));

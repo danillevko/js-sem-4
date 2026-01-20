@@ -1,4 +1,4 @@
-.appear {
+/* .appear {
     opacity: 0.1; 
     transition: opacity 0.7s ease, transform 0.7s ease;
     transform: translateX(-60px);
@@ -7,8 +7,21 @@
 .appear.box {
     opacity: 1;
     transform: translateX(0);
-}
+} */
 
+.lazy-img {
+  width: 100%;
+  height: auto;
+  border: 1px solid #ccc;
+}
+.appear{
+  width: 100px;
+  margin: 600px;
+}
+.img-appear{
+  background-image: url(../hm/Screenshot\ 2025-12-31\ 161600.png);
+  background-repeat: no-repeat;
+}
 
 
 /* .fruits-list {
@@ -46,7 +59,3 @@
   right: 0;
   text-align: center;
 } */
-.fruits-list li {
-    display: block;
-    margin: 650px 1150px;
-}
