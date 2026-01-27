@@ -9,7 +9,7 @@
     transform: translateX(0);
 } */
 
-.lazy-img {
+/* .lazy-img {
   width: 100%;
   height: auto;
   border: 1px solid #ccc;
@@ -17,11 +17,12 @@
 .appear{
   width: 100px;
   margin: 600px;
+  margin-left: 100px;
 }
 .img-appear{
   background-image: url(../hm/Screenshot\ 2025-12-31\ 161600.png);
   background-repeat: no-repeat;
-}
+} */
 
 
 /* .fruits-list {
@@ -59,3 +60,16 @@
   right: 0;
   text-align: center;
 } */
+
+
+
+
+
+/* HM */
+img {
+    width: 200px;
+    height: 200px;
+    background-color: #f0f0f0;
+    display: block;
+    margin-bottom: 1000px;
+}
